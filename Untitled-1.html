@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Arizona Immigration – visa, immigration, study and travel inquiry support.">
+<meta name="theme-color" content="#10243d">
+<title>Arizona Immigration | Your Journey Starts Here</title>
+
+<style>
+:root{--navy:#10243d;--navy2:#1b3856;--red:#c9363e;--gold:#d6b36a;--ink:#172536;--muted:#667587;--paper:#f5f7fa;--line:#e3e8ee;--white:#fff;--shadow:0 18px 48px #10243d18}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:16px/1.65 Arial,sans-serif}
+body[dir=rtl]{font-family:Tahoma,Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+button,input,textarea{font:inherit}
+.container{width:min(1160px,92%);margin:auto}
+
+.top{background:var(--navy);color:#e8eef5;padding:7px 0;font-size:12px}
+.top .container{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+header{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{
+  width:78px;
+  height:78px;
+  object-fit:contain;
+  image-rendering:auto;
+  flex-shrink:0;
+}
+.brand b{display:block;color:var(--navy);font-size:17px}
+.brand small{display:block;color:var(--red);font-size:10px;letter-spacing:2px;font-weight:bold}
+.links{display:flex;gap:22px;font-size:13px;font-weight:bold;color:#33475d}
+.links a:hover{color:var(--red)}
+.actions{display:flex;gap:8px}
+.lang,.menu{border:1px solid var(--line);background:#fff;border-radius:30px;padding:8px 13px;color:var(--navy);font-weight:bold;cursor:pointer}
+.menu{display:none}
+
+.btn{display:inline-block;background:var(--red);color:#fff;border:0;border-radius:30px;padding:13px 22px;font-weight:bold;cursor:pointer}
+.btn:hover{background:#a9232d}
+.btn.dark{background:var(--navy)}
+
+.hero{min-height:620px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,#09192cf2,#09192cb8 55%,#09192c55),url('stand.png') center/cover no-repeat;position:relative}
+.hero:after{content:"";height:6px;position:absolute;bottom:0;left:0;right:0;background:linear-gradient(90deg,var(--red) 0 33%,white 33% 66%,var(--navy) 66%)}
+.hero-copy{max-width:720px;padding:90px 0 105px}
+.eyebrow{color:var(--gold);font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
+.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.08;margin:18px 0}
+.hero p{max-width:620px;color:#e3eaf1;font-size:18px;margin:0 0 28px}
+.hero .btn.dark{background:#ffffff20;border:1px solid #ffffff88;margin-inline-start:8px}
+
+section{padding:84px 0}
+.head{text-align:center;max-width:720px;margin:0 auto 42px}
+.head .eyebrow{color:var(--red)}
+.head h2{font-size:clamp(29px,4vw,43px);line-height:1.2;color:var(--navy);margin:10px 0}
+.head p{color:var(--muted);margin:0}
+
+.vision{background:var(--paper)}
+
+.vision-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.portrait{
+  width:100%;
+  max-width:420px;
+  aspect-ratio:420 / 455;
+  margin:auto;
+  position:relative;
+}
+
+.portrait:before{
+  content:"";
+  position:absolute;
+  inset:18px -16px -16px 18px;
+  border:3px solid var(--red);
+  border-radius:24px;
+}
+
+.portrait img{
+  position:relative;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:24px;
+  box-shadow:var(--shadow);
+}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:20px;padding:28px;background:#fff;box-shadow:0 8px 25px #10243d08}
+.icon{width:52px;height:52px;border-radius:15px;background:#fff0f0;color:var(--red);display:grid;place-items:center;font-size:25px;margin-bottom:16px}
+.card h3{margin:0 0 8px;color:var(--navy)}
+.card p{margin:0;color:var(--muted);font-size:14px}
+
+/* Added only for the detailed service information */
+.service-list{padding-inline-start:20px;margin:15px 0;color:var(--muted);font-size:13px}
+.service-list li{margin-bottom:8px}
+.service-btn{margin-top:18px;padding:10px 17px;font-size:13px}
+
+<section class="destinations" id="destinations">
+.destinations .head h2{color:white}
+.destinations .head p{color:#e5eaf0}
+.destinations .head .eyebrow{color:var(--gold)}
+.dest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.dest-btn{min-height:100px;background:#192d410d;border:1px solid #231f4b30;color:var(--navy);border-radius:17px;cursor:pointer;font-weight:bold;font-size:15px}
+.dest-btn:hover,.dest-btn.active{background:var(--red);border-color:var(--red)}
+.flag{display:block;font-size:25px;margin-bottom:4px}
+
+.panel{display:none;background:white;color:var(--ink);border-radius:20px;padding:25px;margin-top:26px;box-shadow:0 18px 45px #0003}
+.panel.show{display:block}
+.panel h3{color:var(--navy);margin:0 0 5px}
+.hint{color:var(--muted);font-size:14px;margin:0 0 18px}
+.choices{display:flex;flex-wrap:wrap;gap:9px}
+.choice{background:#f7f9fb;border:1px solid var(--line);color:var(--navy);border-radius:25px;padding:10px 16px;cursor:pointer;font-weight:bold}
+.choice:hover,.choice.selected{background:var(--red);color:white;border-color:var(--red)}
+
+.inquiry{background:var(--paper)}
+.formbox{max-width:760px;margin:auto;background:white;border-radius:23px;padding:clamp(22px,5vw,44px);box-shadow:var(--shadow)}
+.summary{padding:13px 16px;background:#f2f5f8;border-inline-start:4px solid var(--red);border-radius:9px;color:var(--navy);font-weight:bold;margin-bottom:22px}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+label{font-size:13px;font-weight:bold;color:var(--navy)}
+input,textarea{border:1px solid #d9e1e9;border-radius:11px;padding:13px;outline:none;width:100%}
+input:focus,textarea:focus{border-color:var(--red);box-shadow:0 0 0 3px #c9363e18}
+textarea{min-height:112px;resize:vertical}
+.formbox .btn{width:100%;margin-top:16px}
+.note{font-size:12px;color:var(--muted)}
+
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.why article{text-align:center;padding:23px 16px;background:var(--paper);border-radius:18px}
+.why article .icon{margin:0 auto 12px}
+.why b{color:var(--navy)}
+.why p{font-size:13px;color:var(--muted);margin:6px 0 0}
+
+.steps{background:var(--paper)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:white;border:1px solid var(--line);border-radius:18px;padding:25px}
+.num{font-size:32px;font-weight:bold;color:var(--red)}
+.step h3{color:var(--navy);margin:0}
+.step p{font-size:14px;color:var(--muted);margin-bottom:0}
+
+/* Reviews section - added without changing the existing design */
+.reviews{background:var(--paper)}
+.review-box{max-width:700px;margin:auto;background:white;border:1px solid var(--line);border-radius:20px;padding:30px;text-align:center;box-shadow:var(--shadow)}
+.review-box h3{color:var(--navy);margin:0 0 8px}
+.review-box p{color:var(--muted);font-size:14px}
+.stars{display:flex;justify-content:center;gap:10px;margin:20px 0;direction:ltr}
+.star{border:0;background:transparent;color:#cbd2da;font-size:40px;cursor:pointer;padding:3px;line-height:1}
+.star.active{
+  color:var(--gold)!important;
+}
+.star{
+  transition:color .2s ease,transform .2s ease;
+}
+.star:hover{transform:scale(1.1)}
+.review-message{display:none;margin-top:18px;padding:12px;border-radius:10px;background:#edf8f0;color:#23683a;font-weight:bold;font-size:14px}
+.review-message.show{display:block}
+.review-note{font-size:12px!important;margin-top:18px}
+.review-summary{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+  margin:25px auto;
+  text-align:center;
+}
+.average-rating,.total-reviews{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px 35px;
+  min-width:180px;
+}
+.average-rating strong,.total-reviews strong{
+  display:block;
+  color:var(--navy);
+  font-size:34px;
+}
+.average-stars{color:var(--gold);font-size:25px}
+.reviews-list{
+  max-width:850px;
+  margin:25px auto;
+  display:grid;
+  gap:15px;
+}
+.review-item{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:20px;
+}
+.review-item h4{margin:0;color:var(--navy)}
+.review-item .review-stars{color:var(--gold);font-size:19px}
+.review-item p{margin:8px 0 0}
+.no-reviews{text-align:center;color:var(--muted)}
+.review-box label{
+  display:block;
+  text-align:start;
+  margin-top:15px;
+}
+
+/* CONTACT SECTION */
+
+#contact{
+  background:var(--navy);
+  color:white;
+}
+
+#contact .head h2{
+  color:white;
+}
+
+#contact .head p{
+  color:#dce5ef;
+}
+
+#contact .head .eyebrow{
+  color:var(--gold);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.contact-card{
+  background:#1b3856;
+  border:1px solid #ffffff25;
+  padding:30px;
+  border-radius:18px;
+  text-align:center;
+  transition:.3s;
+}
+
+.contact-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--gold);
+}
+
+.contact-icon{
+  font-size:35px;
+  margin-bottom:15px;
+}
+
+.contact-card h3{
+  color:white;
+  margin:0 0 15px;
+  font-size:21px;
+}
+
+.contact-card p{
+  font-size:14px;
+  line-height:1.9;
+  color:#dce5ef;
+}
+
+.contact-phone{
+  margin-top:15px;
+}
+
+.contact-phone a{
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  direction:ltr;
+}
+
+.contact-phone a:hover{
+  color:var(--gold);
+}
+
+.whatsapp-icon{
+  background:#25D366;
+  color:white;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:19px;
+}
+
+.disclaimer{
+  background:#0b1a2c;
+  padding:18px 0;
+  border-top:1px solid var(--gold);
+  text-align:center;
+}
+
+.disclaimer p{
+  font-size:11px;
+  color:#c8d2dc;
+  line-height:1.9;
+  margin:7px auto;
+  max-width:1050px;
+}
+.disclaimer p{font-size:12px;color:#627184;margin:7px 0}
+footer{background:#0b1a2c;color:#c8d2dc;padding:27px 0}
+.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.foot b{color:white}
+.footlinks{display:flex;gap:17px;font-size:13px}
+.wa{position:fixed;z-index:30;bottom:20px;right:20px;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:#20bd65;color:white;font-size:26px;box-shadow:0 8px 24px #0003}
+body[dir=rtl] .wa{right:auto;left:20px}
+[hidden]{display:none!important}
+
+@media(max-width:900px){
+.links{display:none;position:absolute;top:78px;left:0;right:0;background:white;padding:18px 5%;border-bottom:1px solid var(--line);flex-direction:column}
+.links.open{display:flex}
+.menu{display:block}
+.vision-grid{grid-template-columns:1fr}
+.portrait{max-width:360px}
+.dest-grid{grid-template-columns:repeat(2,1fr)}
+.why{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:600px){
+.top .container{justify-content:center;text-align:center}
+.brand img{width:48px;height:48px}
+.brand b{font-size:14px}
+.hero{min-height:560px}
+.hero-copy{padding:75px 0 90px}
+.hero p{font-size:16px}
+section{padding:66px 0}
+.cards,.steps-grid,.contact-grid{grid-template-columns:1fr}
+.dest-btn{min-height:90px;font-size:14px}
+.formgrid{grid-template-columns:1fr}
+.field.full{grid-column:auto}
+.why{gap:9px}
+.why article{padding:18px 10px}
+.panel{padding:19px}
+.star{font-size:34px}
+}
+/* Logo adjustment */
+
+.brand b,
+.brand small{
+  display:none!important;
+}
+
+.brand img{
+  width:160px!important;
+  height:140px!important;
+  max-width:none!important;
+  object-fit:contain!important;
+  flex-shrink:0;
+}
+
+.nav{
+  min-height:50px;
+}
+
+@media(max-width:600px){
+  .brand img{
+    width:75px!important;
+    height:75px!important;
+  }
+
+  .nav{
+    min-height:85px;
+  }
+}
+
+/* Engineer image adjustment */
+.portrait{
+  width:100%;
+  max-width:420px;
+  aspect-ratio:420 / 455;
+  margin:auto;
+}
+
+.portrait img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</style>
+</head>
+
+
+<body>
+
+<div class="top">
+<div class="container">
+<span data-en="Professional immigration, visa & international opportunity support" data-ar="دعم مهني في خدمات الهجرة والتأشيرات والفرص الدولية">Professional immigration, visa & international opportunity support</span>
+<span>Amman, Jordan | USA</span>
+</div>
+</div>
+
+<header>
+<div class="container nav">
+<a class="brand" href="#home">
+<img src="Arizona Immigration Logo.png" alt="Arizona Immigration logo">
+<span><b>ARIZONA IMMIGRATION</b><small>YOUR JOURNEY STARTS HERE</small></span>
+</a>
+
+<nav class="links" id="links">
+<a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+<a href="#vision" data-en="About Us" data-ar="من نحن">About Us</a>
+<a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
+<a href="#destinations" data-en="Destinations" data-ar="الوجهات">Destinations</a>
+<a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+</nav>
+
+<div class="actions">
+<button class="lang" id="language">العربية</button>
+<button class="menu" id="menu">☰</button>
+</div>
+</div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-copy">
+<div class="eyebrow" data-en="Arizona Immigration Services" data-ar="خدمات أريزونا للهجرة">Arizona Immigration Services</div>
+<h1 data-en="Your Journey Starts Here" data-ar="رحلتك تبدأ من هنا">Your Journey Starts Here</h1>
+<p data-en="Professional support for your immigration, visa, study and travel inquiries. We help you understand your options and prepare for the next step with clarity." data-ar="دعم مهني لاستفسارات الهجرة والتأشيرات والدراسة والسفر. نساعدك على فهم الخيارات المتاحة والاستعداد للخطوة التالية بوضوح.">Professional support for your immigration, visa, study and travel inquiries. We help you understand your options and prepare for the next step with clarity.</p>
+<a class="btn" href="#destinations" data-en="Explore Destinations" data-ar="اكتشف الوجهات">Explore Destinations</a>
+<a class="btn dark" href="#contact" data-en="Contact Our Team" data-ar="تواصل مع فريقنا">Contact Our Team</a>
+</div>
+</div>
+</section>
+
+<section class="vision" id="vision">
+<div class="container vision-grid">
+<div class="portrait">
+<img src="engineer.jpg" alt="Arizona Immigration leadership">
+</div>
+
+<div class="vision-copy">
+<div class="eyebrow" data-en="Who We Are" data-ar="من نحن">Who We Are</div>
+<h2 data-en="Guidance built around your journey" data-ar="توجيه يواكب رحلتك وطموحك">Guidance built around your journey</h2>
+<p data-en="At Arizona Immigration, we focus on providing organized information and practical support for people exploring international travel, education and immigration pathways. Every inquiry deserves attention, clear communication and a careful look at the available options." data-ar="في Arizona Immigration نركز على تقديم معلومات منظمة ودعم عملي للأشخاص المهتمين بالسفر الدولي والدراسة ومسارات الهجرة. كل استفسار يستحق الاهتمام والتواصل الواضح ودراسة الخيارات المتاحة بعناية.">At Arizona Immigration, we focus on providing organized information and practical support for people exploring international travel, education and immigration pathways. Every inquiry deserves attention, clear communication and a careful look at the available options.</p>
+<p data-en="Our aim is to make complex processes easier to understand, while helping clients take informed next steps." data-ar="هدفنا تبسيط الإجراءات المعقدة ومساعدة العملاء على اتخاذ خطوات مدروسة بناءً على معلومات واضحة.">Our aim is to make complex processes easier to understand, while helping clients take informed next steps.</p>
+
+<div class="signature">
+<b data-en="Eng. Mohammad Al-Maraziq" data-ar="المهندس محمد المرازيق">Eng. Mohammad Al-Maraziq</b>
+<span data-en="Leadership – Arizona Immigration" data-ar="الإدارة – Arizona Immigration">Leadership – Arizona Immigration</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+
+<div class="head">
+<div class="eyebrow" data-en="What We Do" data-ar="ماذا نقدم">What We Do</div>
+<h2 data-en="Services designed around your goals" data-ar="خدمات مصممة لتناسب أهدافك">Services designed around your goals</h2>
+<p data-en="Explore the areas where our team can support your journey." data-ar="اكتشف الخدمات التي يقدم فريقنا من خلالها الدعم لرحلتك.">Explore the areas where our team can support your journey.</p>
+</div>
+
+<div class="cards">
+
+<!-- Study -->
+<article class="card">
+<div class="icon">▣</div>
+
+<h3 data-en="Study & Educational Opportunities" data-ar="الدراسة والفرص التعليمية">Study & Educational Opportunities</h3>
+
+<p data-en="We help you find universities and academic programs that match your qualifications and ambitions. We support admission opportunities across all academic levels, from diplomas and bachelor's degrees to postgraduate diplomas, master's and PhD programs. We also strive to secure scholarship opportunities for our students, subject to competitive selection and eligibility requirements."
+data-ar="نبحث لك عن أفضل الجامعات والتخصصات التي تتناسب مع مؤهلاتك وطموحاتك، ونعمل على تأمين فرص القبول لمختلف الدرجات الأكاديمية، من الدبلوم والبكالوريوس إلى الدبلوم العالي والماجستير والدكتوراه. كما نسعى للحصول على المنح الدراسية لطلابنا، مع الأخذ بعين الاعتبار أن المنح تنافسية وتخضع لشروط الجهات المانحة.">
+</p>
+
+<a class="btn service-btn" href="#contact" data-en="Send an Inquiry" data-ar="أرسل استفسارك">Send an Inquiry</a>
+</article>
+
+<!-- Tourism -->
+<article class="card">
+<div class="icon">✈</div>
+
+<h3 data-en="Tourism & Visit Visas" data-ar="التأشيرات السياحية والزيارات">Tourism & Visit Visas</h3>
+
+<p data-en="We assess your eligibility based on your selected visa type and destination, and help prepare your application and supporting documents to ensure a well-organized and carefully presented submission."
+data-ar="نقيّم أهليتك ومتطلباتك وفق نوع التأشيرة والوجهة التي تختارها، ونساعدك في تجهيز ملفك ووثائقك الداعمة بأفضل صورة ممكنة، لتعزيز جاهزية طلبك وتقديمه بشكل منظم ومدروس.">
+</p>
+
+<a class="btn service-btn" href="#contact" data-en="Send an Inquiry" data-ar="أرسل استفسارك">Send an Inquiry</a>
+</article>
+
+<!-- Family Reunification -->
+<article class="card">
+<div class="icon">⌂</div>
+
+<h3 data-en="Immigration & Family Reunification" data-ar="الهجرة ولمّ الشمل العائلي">Immigration & Family Reunification</h3>
+
+<p data-en="We provide ongoing follow-up throughout your immigration and family reunification journey, monitor updates related to your case, and keep you informed about important developments, requirements and next steps."
+data-ar="نرافقك في رحلة ملف الهجرة ولمّ الشمل من خلال المتابعة المستمرة، ورصد آخر التحديثات المتعلقة بملفك، وإبلاغك بالمستجدات والمتطلبات والخطوات اللازمة، لتبقى على اطلاع دائم بمسار معاملتك.">
+</p>
+
+<a class="btn service-btn" href="#contact" data-en="Send an Inquiry" data-ar="أرسل استفسارك">Send an Inquiry</a>
+</article>
+
+<!-- Diversity Visa -->
+<article class="card">
+<div class="icon">🌎</div>
+
+<h3 data-en="Diversity Visa Program" data-ar="برنامج الهجرة العشوائية">Diversity Visa Program</h3>
+
+<p data-en="We support you through the different stages of the Diversity Visa Program, from entry preparation and registration to selection results and post-selection procedures, helping you understand the requirements and prepare for each stage."
+data-ar="نقدم لك الدعم في مختلف مراحل برنامج الهجرة العشوائية، بدءًا من التسجيل وتجهيز المعلومات، وصولًا إلى متابعة نتائج الاختيار وإجراءات ما بعد الفوز، مع توضيح المتطلبات ومساعدتك في الاستعداد لكل مرحلة.">
+</p>
+
+<a class="btn service-btn" href="#contact" data-en="Send an Inquiry" data-ar="أرسل استفسارك">Send an Inquiry</a>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- DESTINATIONS -->
+  <section id="destinations">
+     <div class="container"> <div class="head">
+         <div class="eyebrow" data-en="Choose Your Destination" data-ar="اختر وجهتك">Choose Your Destination</div>
+          <h2 data-en="Where would you like to go?" data-ar="إلى أين ترغب بالسفر؟">Where would you like to go?</h2>
+           <p data-en="Select one of the destinations below to view the available services." data-ar="اختر إحدى الوجهات التالية لعرض الخدمات المتاحة.">Select one of the destinations below to view the available services.</p> </div> <div class="dest-grid" id="destButtons">
+             <button class="dest-btn" data-dest="United States"><span class="flag">🇺🇸</span><span data-en="United States" data-ar="الولايات المتحدة">United States</span></button>
+              <button class="dest-btn" data-dest="Canada"><span class="flag">🇨🇦</span><span data-en="Canada" data-ar="كندا">Canada</span></button>
+               <button class="dest-btn" data-dest="United Kingdom"><span class="flag">🇬🇧</span><span data-en="United Kingdom" data-ar="المملكة المتحدة">United Kingdom</span></button>
+                <button class="dest-btn" data-dest="Australia"><span class="flag">🇦🇺</span><span data-en="Australia" data-ar="أستراليا">Australia</span></button>
+                 <button class="dest-btn" data-dest="Schengen"><span class="flag">🇪🇺</span><span data-en="Schengen" data-ar="شنغن">Schengen</span></button>
+                  <button class="dest-btn" data-dest="East Asia"><span class="flag"></span><span data-en="East Asia" data-ar="شرق آسيا">East Asia</span></button>
+                   <button class="dest-btn" data-dest="Mexico"><span class="flag">🇲🇽</span><span data-en="Mexico" data-ar="المكسيك">Mexico</span></button> </div> <div class="panel" id="panel" aria-live="polite"> <h3 id="panelTitle"></h3> <p class="hint" id="panelHint"></p> <div class="choices" id="choices"></div> </div> 
+                </div> 
+                </section>
+
+<section class="inquiry" id="inquiry" hidden>
+<div class="container">
+<div class="head">
+<div class="eyebrow" data-en="Send an Inquiry" data-ar="أرسل استفسارك">Send an Inquiry</div>
+<h2 data-en="Tell us briefly about your case" data-ar="أخبرنا باختصار عن حالتك">Tell us briefly about your case</h2>
+<p data-en="Complete the short form and continue directly to WhatsApp." data-ar="عبّئ النموذج المختصر وانتقل مباشرة إلى واتساب.">Complete the short form and continue directly to WhatsApp.</p>
+</div>
+
+<div class="formbox">
+<div class="summary" id="summary"></div>
+<form id="form">
+<div class="formgrid">
+<div class="field">
+<label for="name" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+<input id="name" required autocomplete="name">
+</div>
+<div class="field">
+<label for="phone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
+<input id="phone" type="tel" required autocomplete="tel">
+</div>
+<div class="field full">
+<label for="details" data-en="Briefly describe your case" data-ar="اكتب نبذة مختصرة عن حالتك">Briefly describe your case</label>
+<textarea id="details" required></textarea>
+</div>
+</div>
+<p class="note" data-en="WhatsApp will open with your inquiry details ready to send to our team." data-ar="سيفتح واتساب مع تجهيز تفاصيل استفسارك لإرسالها إلى فريقنا.">WhatsApp will open with your inquiry details ready to send to our team.</p>
+<button class="btn" type="submit" data-en="Continue to WhatsApp" data-ar="المتابعة إلى واتساب">Continue to WhatsApp</button>
+</form>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="head">
+<div class="eyebrow" data-en="Why Arizona" data-ar="لماذا أريزونا">Why Arizona</div>
+<h2 data-en="What makes us different" data-ar="ما الذي يميزنا">What makes us different</h2>
+<p data-en="A client-focused approach built on clarity, organization and responsive communication." data-ar="نهج يضع العميل أولاً، ويرتكز على الوضوح والتنظيم وسرعة التواصل.">A client-focused approach built on clarity, organization and responsive communication.</p>
+</div>
+
+<div class="why">
+<article><div class="icon">✓</div><b data-en="Clear Communication" data-ar="تواصل واضح">Clear Communication</b><p data-en="Straightforward information and practical next steps." data-ar="معلومات مباشرة وخطوات عملية واضحة.">Straightforward information and practical next steps.</p></article>
+<article><div class="icon">◎</div><b data-en="Client Focus" data-ar="اهتمام بالعميل">Client Focus</b><p data-en="We take time to understand each inquiry." data-ar="نخصص الوقت لفهم كل استفسار.">We take time to understand each inquiry.</p></article>
+<article><div class="icon">▤</div><b data-en="Organized Support" data-ar="دعم منظم">Organized Support</b><p data-en="A structured approach to information and documents." data-ar="طريقة منظمة للتعامل مع المعلومات والوثائق.">A structured approach to information and documents.</p></article>
+<article><div class="icon">↗</div><b data-en="International Reach" data-ar="وجهات دولية">International Reach</b><p data-en="Support across a range of international destinations." data-ar="دعم لمجموعة من الوجهات الدولية.">Support across a range of international destinations.</p></article>
+</div>
+</div>
+</section>
+
+<section class="steps">
+<div class="container">
+<div class="head">
+<div class="eyebrow" data-en="How We Work" data-ar="كيف نعمل">How We Work</div>
+<h2 data-en="A simple path forward" data-ar="خطوات واضحة نحو الخطوة التالية">A simple path forward</h2>
+</div>
+
+<div class="steps-grid">
+<article class="step"><div class="num">01</div><h3 data-en="Choose a destination" data-ar="اختر الوجهة">Choose a destination</h3><p data-en="Select the country or region that matches your plans." data-ar="اختر الدولة أو المنطقة التي تناسب خططك.">Select the country or region that matches your plans.</p></article>
+<article class="step"><div class="num">02</div><h3 data-en="Select a service" data-ar="اختر الخدمة">Select a service</h3><p data-en="Choose the type of inquiry you would like to discuss." data-ar="حدد نوع الاستفسار الذي ترغب بمناقشته.">Choose the type of inquiry you would like to discuss.</p></article>
+<article class="step"><div class="num">03</div><h3 data-en="Send your inquiry" data-ar="أرسل استفسارك">Send your inquiry</h3><p data-en="Share your contact details and a short description through WhatsApp." data-ar="أرسل بيانات التواصل ووصفاً مختصراً لحالتك عبر واتساب.">Share your contact details and a short description through WhatsApp.</p></article>
+</div>
+</div>
+</section>
+
+<!-- Customer Reviews Section -->
+<section class="reviews" id="reviews">
+<div class="container">
+
+<div class="head">
+<div class="eyebrow" data-en="Your Feedback Matters" data-ar="رأيك يهمنا">Your Feedback Matters</div>
+
+<h2 data-en="Customer Reviews" data-ar="آراء العملاء">Customer Reviews</h2>
+
+<p data-en="Discover what our customers say about their experience with Arizona Immigration."
+data-ar="تعرّف على آراء عملائنا وتجاربهم مع Arizona Immigration.">
+Discover what our customers say about their experience with Arizona Immigration.
+</p>
+</div>
+
+<!-- Reviews Summary -->
+<div class="review-summary">
+
+<div class="average-rating">
+<strong id="averageRating">0.0</strong>
+<div class="average-stars" id="averageStars">☆☆☆☆☆</div>
+<p data-en="Average Rating" data-ar="متوسط التقييم">Average Rating</p>
+</div>
+
+<div class="total-reviews">
+<strong id="totalReviews">0</strong>
+<p data-en="Approved Reviews" data-ar="التقييمات المعتمدة">Approved Reviews</p>
+</div>
+
+</div>
+
+<!-- Published Reviews -->
+<div class="reviews-list" id="reviewsList">
+
+<p class="no-reviews"
+data-en="No customer reviews have been published yet."
+data-ar="لا توجد تقييمات منشورة حتى الآن.">
+No customer reviews have been published yet.
+</p>
+
+</div>
+
+<!-- Submit Review -->
+<div class="review-box">
+
+<h3 data-en="Share Your Experience"
+data-ar="شاركنا تجربتك">
+Share Your Experience
+</h3>
+
+<p data-en="Your opinion helps us improve our services."
+data-ar="رأيك يساعدنا على تطوير خدماتنا.">
+Your opinion helps us improve our services.
+</p>
+
+<form id="reviewForm">
+
+<label for="reviewName"
+data-en="Your Name"
+data-ar="اسمك">
+Your Name
+</label>
+
+<input
+type="text"
+id="reviewName"
+maxlength="60"
+required
+placeholder="Enter your name"
+>
+
+<label
+data-en="Your Rating"
+data-ar="تقييمك">
+Your Rating
+</label>
+
+<div class="stars" id="stars">
+
+<button type="button" class="star" data-rating="1" aria-label="1 star">★</button>
+<button type="button" class="star" data-rating="2" aria-label="2 stars">★</button>
+<button type="button" class="star" data-rating="3" aria-label="3 stars">★</button>
+<button type="button" class="star" data-rating="4" aria-label="4 stars">★</button>
+<button type="button" class="star" data-rating="5" aria-label="5 stars">★</button>
+
+</div>
+
+<label for="reviewComment"
+data-en="Your Comment"
+data-ar="تعليقك">
+Your Comment
+</label>
+
+<textarea
+id="reviewComment"
+rows="4"
+maxlength="1000"
+required
+placeholder="Write about your experience..."
+></textarea>
+
+<button type="submit" class="btn" id="submitReview"
+data-en="Submit Review"
+data-ar="إرسال التقييم">
+Submit Review
+</button>
+
+</form>
+
+<div class="review-message" id="reviewMessage" role="status"></div>
+
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+<div class="container">
+
+<div class="head">
+<div class="eyebrow" data-en="GET IN TOUCH" data-ar="تواصل معنا">GET IN TOUCH</div>
+
+<h2 data-en="Contact Our Team" data-ar="تواصل مع فريقنا">Contact Our Team</h2>
+
+<p data-en="We are here to assist you with your inquiries."
+data-ar="يسعدنا استقبال استفساراتكم ومساعدتكم.">
+We are here to assist you with your inquiries.
+</p>
+</div>
+
+<div class="contact-grid">
+
+<!-- Jordan Office -->
+<div class="contact-card">
+
+<div class="contact-icon">🇯🇴</div>
+
+<h3 data-en="Jordan Office" data-ar="مكتب الأردن">Jordan Office</h3>
+
+<p data-en="University Street, opposite the University Mosque traffic light, Arab Bank Complex, Amman, Jordan"
+data-ar="شارع الجامعة الأردنية، مقابل إشارة مسجد الجامعة، مجمع البنك العربي، عمّان، الأردن">
+University Street, opposite the University Mosque traffic light, Arab Bank Complex, Amman, Jordan
+</p>
+
+<div class="contact-phone">
+<a href="https://wa.me/962799628705" target="_blank" rel="noopener">
+<span class="whatsapp-icon">☏</span>
++962 79 962 8705
+</a>
+</div>
+
+<div class="contact-phone">
+<a href="https://wa.me/962798447170" target="_blank" rel="noopener">
+<span class="whatsapp-icon">☏</span>
++962 79 844 7170
+</a>
+</div>
+
+</div>
+
+<!-- USA Office -->
+<div class="contact-card">
+
+<div class="contact-icon">🇺🇸</div>
+
+<h3 data-en="USA Office" data-ar="مكتب الولايات المتحدة">USA Office</h3>
+
+<p>
+320 Spruce Street, Spartanburg, SC 29303, USA
+</p>
+
+<div class="contact-phone">
+<a href="https://wa.me/18645803408" target="_blank" rel="noopener">
+<span class="whatsapp-icon">☏</span>
++1 (864) 580-3408
+</a>
+</div>
+
+</div>
+
+<!-- Email -->
+<div class="contact-card">
+
+<div class="contact-icon">✉</div>
+
+<h3 data-en="Email Us" data-ar="البريد الإلكتروني">Email Us</h3>
+
+<p data-en="For inquiries and further information, contact us by email."
+data-ar="للاستفسارات والحصول على المزيد من المعلومات، يمكنكم التواصل معنا عبر البريد الإلكتروني.">
+For inquiries and further information, contact us by email.
+</p>
+
+<div class="contact-phone">
+<a href="mailto:info@arizonaservicesorg.com">
+info@arizonaservicesorg.com
+</a>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Legal Disclaimer -->
+<section class="disclaimer">
+<div class="container">
+
+<p data-en="IMPORTANT NOTICE: Arizona Immigration is an independent private service provider, not a government agency or affiliated with any government authority. We are not licensed attorneys, do not practice law or provide legal advice, and have no authority to issue visas or make immigration decisions. All such decisions are made solely by the relevant government authorities."
+data-ar="تنويه مهم: أريزونا للهجرة جهة خاصة مستقلة، وليست جهة حكومية أو تابعة لأي مؤسسة رسمية. نحن لسنا محامين مرخّصين ولا نمارس القانون أو نقدم استشارات قانونية، كما أننا لا نصدر التأشيرات ولا نتخذ قرارات بشأن معاملات الهجرة؛ فجميع هذه الصلاحيات تعود حصريًا إلى الجهات الحكومية المختصة.">
+IMPORTANT NOTICE: Arizona Immigration is an independent private service provider, not a government agency or affiliated with any government authority. We are not licensed attorneys, do not practice law or provide legal advice, and have no authority to issue visas or make immigration decisions. All such decisions are made solely by the relevant government authorities.
+</p>
+
+</div>
+</section>
+
+<footer>
+<div class="container foot">
+<div><b>ARIZONA IMMIGRATION</b><br><small>© <span id="year"></span> <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></small></div>
+<div class="footlinks">
+<a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+<a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
+<a href="#destinations" data-en="Destinations" data-ar="الوجهات">Destinations</a>
+<a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+</div>
+</div>
+</footer>
+
+<a class="wa" href="https://wa.me/962799628705" target="_blank" rel="noopener" aria-label="WhatsApp">☏</a>
+
+<script>
+const SUPABASE_URL = "https://tzagowvehknrhinfbhux.supabase.co";
+const SUPABASE_KEY = "sb_publishable_fzIYH0uUvlAUL31KDK3HyA_nbUhjJnQ";
+
+const reviewsAPI = SUPABASE_URL + "/rest/v1/reviews";
+
+const headers = {
+  "apikey": SUPABASE_KEY,
+  "Authorization": "Bearer " + SUPABASE_KEY,
+  "Content-Type": "application/json"
+};
+
+let selectedRating = 0;
+
+const reviewForm = document.getElementById("reviewForm");
+const starsContainer = document.getElementById("stars");
+const reviewMessage = document.getElementById("reviewMessage");
+
+function currentReviewLang(){
+  return document.documentElement.lang === "ar" ? "ar" : "en";
+}
+
+function showReviewMessage(en, ar, error = false){
+  reviewMessage.textContent = currentReviewLang() === "ar" ? ar : en;
+  reviewMessage.style.background = error ? "#fff0f0" : "#edf8f0";
+  reviewMessage.style.color = error ? "#a9232d" : "#23683a";
+  reviewMessage.classList.add("show");
+}
+
+function updateStars(){
+  document.querySelectorAll("#stars .star").forEach(star => {
+    const rating = Number(star.dataset.rating);
+    star.classList.toggle("active", rating <= selectedRating);
+  });
+}
+
+starsContainer.querySelectorAll(".star").forEach(star => {
+  star.addEventListener("click", () => {
+    selectedRating = Number(star.dataset.rating);
+    updateStars();
+  });
+});
+
+function updateReviewPlaceholders(){
+  const lang = currentReviewLang();
+
+  document.getElementById("reviewName").placeholder =
+    lang === "ar" ? "أدخل اسمك" : "Enter your name";
+
+  document.getElementById("reviewComment").placeholder =
+    lang === "ar" ? "اكتب عن تجربتك..." : "Write about your experience...";
+}
+
+new MutationObserver(updateReviewPlaceholders).observe(
+  document.documentElement,
+  { attributes:true, attributeFilter:["lang"] }
+);
+
+updateReviewPlaceholders();
+
+async function loadReviews(){
+  const list = document.getElementById("reviewsList");
+
+  try{
+    const response = await fetch(
+      reviewsAPI + "?select=customer_name,rating,comment,created_at&approved=eq.true&order=created_at.desc",
+      { headers }
+    );
+
+    if(!response.ok) throw new Error("Could not load reviews");
+
+    const reviews = await response.json();
+
+    document.getElementById("totalReviews").textContent = reviews.length;
+
+    const average = reviews.length
+      ? reviews.reduce((sum, item) => sum + item.rating, 0) / reviews.length
+      : 0;
+
+    document.getElementById("averageRating").textContent = average.toFixed(1);
+
+    const roundedAverage = Math.round(average);
+
+    document.getElementById("averageStars").textContent =
+      "★".repeat(roundedAverage) + "☆".repeat(5 - roundedAverage);
+
+    list.replaceChildren();
+
+    if(reviews.length === 0){
+      const empty = document.createElement("p");
+      empty.className = "no-reviews";
+      empty.textContent = currentReviewLang() === "ar"
+        ? "لا توجد تقييمات منشورة حتى الآن."
+        : "No customer reviews have been published yet.";
+
+      list.appendChild(empty);
+      return;
+    }
+
+    reviews.forEach(review => {
+      const item = document.createElement("article");
+      item.className = "review-item";
+
+      const name = document.createElement("h4");
+      name.textContent = review.customer_name;
+
+      const rating = document.createElement("div");
+      rating.className = "review-stars";
+      rating.textContent =
+        "★".repeat(review.rating) + "☆".repeat(5 - review.rating);
+
+      const comment = document.createElement("p");
+      comment.textContent = review.comment;
+
+      item.append(name, rating, comment);
+      list.appendChild(item);
+    });
+
+  }catch(error){
+    list.textContent = currentReviewLang() === "ar"
+      ? "تعذر تحميل التقييمات حاليًا."
+      : "Reviews could not be loaded at this time.";
+  }
+}
+
+reviewForm.addEventListener("submit", async function(event){
+  event.preventDefault();
+
+  const customerName = document.getElementById("reviewName").value.trim();
+  const comment = document.getElementById("reviewComment").value.trim();
+  const button = document.getElementById("submitReview");
+
+  if(selectedRating === 0){
+    showReviewMessage(
+      "Please select a star rating.",
+      "يرجى اختيار عدد النجوم.",
+      true
+    );
+    return;
+  }
+
+  if(customerName.length < 2 || comment.length < 5){
+    showReviewMessage(
+      "Please enter your name and a comment of at least 5 characters.",
+      "يرجى إدخال اسمك وتعليق لا يقل عن 5 أحرف.",
+      true
+    );
+    return;
+  }
+
+  button.disabled = true;
+
+  try{
+    const response = await fetch(reviewsAPI, {
+      method:"POST",
+      headers:{
+        ...headers,
+        "Prefer":"return=minimal"
+      },
+      body:JSON.stringify({
+        customer_name:customerName,
+        rating:selectedRating,
+        comment:comment
+      })
+    });
+
+    if(!response.ok) throw new Error("Submission failed");
+
+    reviewForm.reset();
+    selectedRating = 0;
+    updateStars();
+
+    showReviewMessage(
+      "Thank you for sharing your experience!",
+      "شكرًا لمشاركة تجربتك."
+    );
+
+  }catch(error){
+    showReviewMessage(
+      "Your review could not be submitted. Please try again.",
+      "تعذر إرسال تقييمك. يرجى المحاولة مرة أخرى.",
+      true
+    );
+  }finally{
+    button.disabled = false;
+  }
+});
+
+// DESTINATION BUTTONS
+
+const destinationButtons = document.getElementById("destButtons");
+const destinationPanel = document.getElementById("panel");
+const destinationTitle = document.getElementById("panelTitle");
+const destinationHint = document.getElementById("panelHint");
+const serviceChoices = document.getElementById("choices");
+
+const inquirySection = document.getElementById("inquiry");
+const inquirySummary = document.getElementById("summary");
+const inquiryForm = document.getElementById("form");
+
+let selectedDestination = "";
+let selectedService = "";
+
+const generalServices = [
+  { en: "Tourism", ar: "السياحة" },
+  { en: "Visit", ar: "الزيارة" },
+  { en: "Study", ar: "الدراسة" },
+  { en: "Other Inquiry", ar: "استفسار آخر" }
+];
+
+const destinationServices = {
+  "United States": [
+    ...generalServices.slice(0, 3),
+    { en: "Family Reunification", ar: "لمّ الشمل العائلي" }
+  ],
+  "Canada": generalServices,
+  "United Kingdom": generalServices,
+  "Australia": generalServices,
+  "Schengen": generalServices,
+  "East Asia": generalServices,
+  "Mexico": generalServices
+};
+
+destinationButtons.addEventListener("click", function(event){
+
+  const button = event.target.closest(".dest-btn");
+  if(!button) return;
+
+  selectedDestination = button.dataset.dest;
+  selectedService = "";
+
+  const isArabic = document.documentElement.lang === "ar";
+
+  destinationButtons.querySelectorAll(".dest-btn").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+
+  destinationTitle.textContent = selectedDestination;
+
+  destinationHint.textContent = isArabic
+    ? "اختر نوع الخدمة التي ترغب بالاستفسار عنها."
+    : "Select the service you would like to inquire about.";
+
+  serviceChoices.replaceChildren();
+
+  destinationServices[selectedDestination].forEach(service => {
+
+    const choice = document.createElement("button");
+    choice.type = "button";
+    choice.className = "choice";
+
+    choice.textContent = isArabic ? service.ar : service.en;
+
+    choice.addEventListener("click", function(){
+
+      selectedService = isArabic ? service.ar : service.en;
+
+      serviceChoices.querySelectorAll(".choice").forEach(item => {
+        item.classList.remove("selected");
+      });
+
+      choice.classList.add("selected");
+
+      inquirySummary.textContent = isArabic
+        ? "الوجهة: " + selectedDestination + " | الخدمة: " + selectedService
+        : "Destination: " + selectedDestination + " | Service: " + selectedService;
+
+      inquirySection.hidden = false;
+
+      inquirySection.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+
+    });
+
+    serviceChoices.appendChild(choice);
+
+  });
+
+  destinationPanel.classList.add("show");
+
+  destinationPanel.scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
+
+});
+
+
+inquiryForm.addEventListener("submit", function(event){
+
+  event.preventDefault();
+
+  const customerName = document.getElementById("name").value.trim();
+  const customerPhone = document.getElementById("phone").value.trim();
+  const customerDetails = document.getElementById("details").value.trim();
+
+  const message =
+    "New Inquiry - Arizona Immigration\n\n" +
+    "Destination: " + selectedDestination + "\n" +
+    "Service: " + selectedService + "\n" +
+    "Name: " + customerName + "\n" +
+    "Phone: " + customerPhone + "\n" +
+    "Details: " + customerDetails;
+
+  const whatsappURL =
+    "https://wa.me/962799628705?text=" +
+    encodeURIComponent(message);
+
+  window.open(whatsappURL, "_blank");
+
+});
+
+// LANGUAGE SWITCH
+
+const languageButton = document.getElementById("language");
+
+languageButton.addEventListener("click", function(){
+
+  const currentLang = document.documentElement.lang;
+  const newLang = currentLang === "en" ? "ar" : "en";
+
+  document.documentElement.lang = newLang;
+  document.documentElement.dir = newLang === "ar" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-en][data-ar]").forEach(element => {
+    element.textContent = newLang === "ar"
+      ? element.dataset.ar
+      : element.dataset.en;
+  });
+
+  languageButton.textContent = newLang === "ar"
+    ? "English"
+    : "العربية";
+
+}); 
+
+loadReviews();
+</script>
+
+</body>
+</html>
