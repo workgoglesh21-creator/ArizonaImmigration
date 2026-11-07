@@ -1092,6 +1092,133 @@ const destinationServices = {
   "East Asia": generalServices,
   "Mexico": generalServices
 };
+  destinationButtons.addEventListener("click", function(event){
+
+  const button = event.target.closest(".dest-btn");
+  if(!button) return;
+
+  selectedDestination = button.dataset.dest;
+  selectedCountry = "";
+  selectedService = "";
+
+  const isArabic = document.documentElement.lang === "ar";
+
+  inquirySection.hidden = true;
+
+  destinationButtons.querySelectorAll(".dest-btn").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+
+  destinationTitle.textContent = selectedDestination;
+  serviceChoices.replaceChildren();
+
+  destinationPanel.classList.add("show");
+
+  // Show Schengen countries first
+  if(selectedDestination === "Schengen"){
+
+    destinationHint.textContent = isArabic
+      ? "اختر الدولة التي ترغب بالسفر إليها."
+      : "Select the country you wish to travel to.";
+
+    schengenCountries.forEach(country => {
+
+      const choice = document.createElement("button");
+      choice.type = "button";
+      choice.className = "choice";
+      choice.textContent = isArabic ? country.ar : country.en;
+
+      choice.addEventListener("click", function(){
+
+        selectedCountry = country.en;
+
+        destinationTitle.textContent = isArabic
+          ? country.ar
+          : country.en;
+
+        showServices();
+
+      });
+
+      serviceChoices.appendChild(choice);
+
+    });
+
+  } else {
+
+    showServices();
+
+  }
+
+  destinationPanel.scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
+
+
+  // Display available services
+  function showServices(){
+
+    serviceChoices.replaceChildren();
+
+    destinationHint.textContent = isArabic
+      ? "اختر نوع الخدمة التي ترغب بالاستفسار عنها."
+      : "Select the service you would like to inquire about.";
+
+    const services = destinationServices[selectedDestination] || generalServices;
+
+    services.forEach(service => {
+
+      const choice = document.createElement("button");
+      choice.type = "button";
+      choice.className = "choice";
+
+      choice.textContent = isArabic ? service.ar : service.en;
+
+      choice.addEventListener("click", function(){
+
+        selectedService = service.en;
+
+        serviceChoices.querySelectorAll(".choice").forEach(item => {
+          item.classList.remove("selected");
+        });
+
+        choice.classList.add("selected");
+
+        const countryText = selectedCountry
+          ? (
+              isArabic
+                ? schengenCountries.find(c => c.en === selectedCountry).ar
+                : selectedCountry
+            )
+          : "";
+
+        inquirySummary.textContent = isArabic
+          ? "الوجهة: " + selectedDestination +
+            (countryText ? " | الدولة: " + countryText : "") +
+            " | الخدمة: " + service.ar
+          : "Destination: " + selectedDestination +
+            (countryText ? " | Country: " + countryText : "") +
+            " | Service: " + service.en;
+
+        inquirySection.hidden = false;
+
+        inquirySection.scrollIntoView({
+          behavior:"smooth",
+          block:"start"
+        });
+
+      });
+
+      serviceChoices.appendChild(choice);
+
+    });
+
+  }
+
+});
 
 inquiryForm.addEventListener("submit", function(event){
 
