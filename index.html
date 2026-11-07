@@ -270,9 +270,10 @@ textarea{min-height:112px;resize:vertical}
   color:white;
   font-weight:bold;
   text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
   direction:ltr;
 }
 
@@ -778,16 +779,15 @@ University Street, opposite the University Mosque traffic light, Arab Bank Compl
 
 ```html
 <div class="contact-phone">
-  <a href="https://wa.me/18645803408" target="_blank" rel="noopener">
-    <div>
-      <span class="whatsapp-icon">☏</span>
-      +1 (864) 580-3408
-    </div>
-    <div>
-      <span class="whatsapp-icon">☏</span>
-      +1 (929) 598-0299
-    </div>
-  </a>
+ <a href="https://wa.me/18645803408" target="_blank" rel="noopener">
+<span class="whatsapp-icon">☏</span>
++1 (864) 580-3408
+</a>
+
+<a href="https://wa.me/19295980299" target="_blank" rel="noopener">
+<span class="whatsapp-icon">☏</span>
++1 (929) 598-0299
+</a>
 </div>
 ```
 <!-- Email -->
