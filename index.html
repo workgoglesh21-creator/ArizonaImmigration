@@ -1079,8 +1079,9 @@ const schengenCountries = [
   { en: "Sweden", ar: "السويد" },
   { en: "Switzerland", ar: "سويسرا" }
 ];
+const destinationServices = {  
 "United States": [
-  ...generalServices.slice(0, 3),
+  ...generalServices.slice(0, 2),
   { en: "Family Reunification", ar: "لمّ الشمل العائلي" },
   { en: "Diversity Visa Lottery (DV Lottery)", ar: "برنامج الهجرة العشوائية (اللوتري)" }
 ],
@@ -1091,10 +1092,6 @@ const schengenCountries = [
   "East Asia": generalServices,
   "Mexico": generalServices
 };
-
-"Destination: " + selectedDestination + "\n" +
-(selectedCountry ? "Country: " + selectedCountry + "\n" : "") +
-"Service: " + selectedService + "\n" +
 
 inquiryForm.addEventListener("submit", function(event){
 
