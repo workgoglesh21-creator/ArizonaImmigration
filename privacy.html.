@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Privacy Policy | Arizona Immigration</title>
+
+<meta name="description" content="Arizona Immigration Privacy Policy. Learn how we collect, use and protect personal information.">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #10243d;
+  --red: #c9363e;
+  --gold: #d6b36a;
+  --light: #f5f7fa;
+  --text: #263445;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Cairo", sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.8;
+}
+
+body[dir="rtl"] {
+  font-family: "Cairo", Arial, sans-serif;
+}
+
+header {
+  background: var(--navy);
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.header-actions a,
+.header-actions button {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  background: transparent;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.header-actions button:hover,
+.header-actions a:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.hero {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 55px 20px 65px;
+  border-bottom: 5px solid var(--red);
+}
+
+.hero h1 {
+  font-size: 34px;
+  margin: 0 0 10px;
+}
+
+.hero p {
+  color: #dce4ed;
+  margin: 0;
+}
+
+.container {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.policy {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px #0000000d;
+}
+
+.policy section {
+  padding: 18px 0;
+  border-bottom: 1px solid #e8edf2;
+}
+
+.policy section:last-child {
+  border-bottom: none;
+}
+
+.policy h2 {
+  color: var(--navy);
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.policy h2::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 20px;
+  background: var(--red);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+body[dir="rtl"] .policy h2::before {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.policy p {
+  margin: 8px 0;
+}
+
+.policy ul {
+  padding-left: 25px;
+}
+
+body[dir="rtl"] .policy ul {
+  padding-left: 0;
+  padding-right: 25px;
+}
+
+.updated {
+  color: #697789;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.contact-link {
+  color: var(--red);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  background: var(--navy);
+  color: #dce4ed;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 13px;
+}
+
+footer strong {
+  color: white;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media(max-width:600px) {
+  header {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  .policy {
+    padding: 22px;
+  }
+
+  .policy h2 {
+    font-size: 18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo">
+ARIZONA <span>IMMIGRATION</span>
+</a>
+
+<div class="header-actions">
+
+<a href="index.html" data-en="Home" data-ar="الرئيسية">
+Home
+</a>
+
+<button type="button" onclick="switchLanguage()">
+العربية
+</button>
+
+</div>
+</header>
+
+
+<div class="hero">
+
+<h1 data-en="Privacy Policy"
+data-ar="سياسة الخصوصية">
+Privacy Policy
+</h1>
+
+<p data-en="Your privacy and personal information matter to us."
+data-ar="خصوصيتكم ومعلوماتكم الشخصية تهمنا.">
+Your privacy and personal information matter to us.
+</p>
+
+</div>
+
+
+<main class="container">
+
+<div class="policy">
+
+<div id="englishPolicy">
+
+<p class="updated">
+Last Updated: November 7, 2026
+</p>
+
+<section>
+<h2>1. Introduction</h2>
+
+<p>
+Arizona Immigration is an independent private service provider.
+This Privacy Policy explains how we collect, use, and handle
+personal information when visitors use our website or contact us
+about our services.
+</p>
+
+<p>
+By using this website or submitting information through our
+communication channels, you acknowledge this Privacy Policy.
+</p>
+</section>
+
+
+<section>
+<h2>2. Information We Collect</h2>
+
+<p>
+Depending on how you interact with us, we may collect information
+you voluntarily provide, including:
+</p>
+
+<ul>
+<li>Full name.</li>
+<li>Telephone and WhatsApp numbers.</li>
+<li>Email address.</li>
+<li>Country of residence or intended destination.</li>
+<li>Type of service requested.</li>
+<li>Details included in your inquiry.</li>
+<li>Other information you voluntarily provide when communicating with us.</li>
+</ul>
+
+</section>
+
+
+<section>
+<h2>3. How We Use Your Information</h2>
+
+<p>
+Information provided to Arizona Immigration may be used for:
+</p>
+
+<ul>
+<li>Responding to inquiries and requests.</li>
+<li>Communicating with potential and existing clients.</li>
+<li>Understanding the services requested.</li>
+<li>Providing information about relevant services.</li>
+<li>Managing client communications and service requests.</li>
+<li>Maintaining business and communication records.</li>
+</ul>
+
+</section>
+
+
+<section>
+<h2>4. Information Protection</h2>
+
+<p>
+Arizona Immigration takes the privacy of personal information
+seriously and seeks to limit access to information to authorized
+individuals who need it for legitimate business purposes.
+</p>
+
+<p>
+No method of electronic transmission or storage can be guaranteed
+to be completely secure. We therefore cannot guarantee absolute
+security of information transmitted through the internet.
+</p>
+
+</section>
+
+
+<section>
+<h2>5. Information Sharing</h2>
+
+<p>
+Personal information may be accessed by authorized personnel
+involved in responding to inquiries or providing requested services.
+</p>
+
+<p>
+Information may also be processed by third-party service providers
+that support website hosting, communication, or other necessary
+business operations, where applicable.
+</p>
+
+<p>
+Information may be disclosed when required by applicable law
+or a valid legal request.
+</p>
+
+</section>
+
+
+<section>
+<h2>6. Third-Party Services</h2>
+
+<p>
+Our website may contain links to external services, including
+WhatsApp and email providers.
+</p>
+
+<p>
+When you use these services, their own privacy policies and
+terms may apply. Arizona Immigration does not control the
+privacy practices of external platforms.
+</p>
+
+</section>
+
+
+<section>
+<h2>7. Data Retention</h2>
+
+<p>
+Personal information may be retained for as long as reasonably
+necessary to respond to inquiries, provide services, maintain
+business records, or meet applicable legal obligations.
+</p>
+
+</section>
+
+
+<section>
+<h2>8. Your Privacy Rights</h2>
+
+<p>
+Depending on applicable law, you may have rights regarding
+your personal information, including the right to request:
+</p>
+
+<ul>
+<li>Access to personal information we hold about you.</li>
+<li>Correction of inaccurate information.</li>
+<li>Deletion of information, where legally permitted.</li>
+<li>Information about how your data is used.</li>
+</ul>
+
+<p>
+To submit a privacy-related request, please contact us using
+the email address below.
+</p>
+
+</section>
+
+
+<section>
+<h2>9. Children's Privacy</h2>
+
+<p>
+Our website is not specifically directed toward children.
+We do not knowingly seek to collect personal information
+directly from children through this website without appropriate
+authorization where required by law.
+</p>
+
+</section>
+
+
+<section>
+<h2>10. Changes to This Policy</h2>
+
+<p>
+Arizona Immigration may update this Privacy Policy when necessary.
+Any updated version will be published on this page with a revised
+last-updated date.
+</p>
+
+</section>
+
+
+<section>
+<h2>11. Contact Us</h2>
+
+<p>
+For questions or requests concerning this Privacy Policy,
+please contact Arizona Immigration:
+</p>
+
+<p>
+Email:
+<a class="contact-link"
+href="mailto:info@arizonaservicesorg.com">
+info@arizonaservicesorg.com
+</a>
+</p>
+
+<p>
+Website:
+<a class="contact-link" href="index.html">
+Arizona Immigration
+</a>
+</p>
+
+</section>
+
+</div>
+
+
+<div id="arabicPolicy" hidden>
+
+<p class="updated">
+آخر تحديث: 7 نوفمبر 2026
+</p>
+
+<section>
+<h2>1. مقدمة</h2>
+
+<p>
+أريزونا للهجرة جهة خاصة مستقلة. توضح سياسة الخصوصية هذه
+كيفية جمع المعلومات الشخصية واستخدامها والتعامل معها عندما
+يزور المستخدمون موقعنا الإلكتروني أو يتواصلون معنا بشأن خدماتنا.
+</p>
+
+<p>
+باستخدام هذا الموقع أو إرسال المعلومات من خلال قنوات التواصل
+الخاصة بنا، فإنك تقرّ بالاطلاع على سياسة الخصوصية هذه.
+</p>
+</section>
+
+
+<section>
+<h2>2. المعلومات التي نجمعها</h2>
+
+<p>
+بحسب طبيعة تفاعلك معنا، قد نجمع المعلومات التي تقدمها
+بمحض إرادتك، ومنها:
+</p>
+
+<ul>
+<li>الاسم الكامل.</li>
+<li>رقم الهاتف ورقم واتساب.</li>
+<li>عنوان البريد الإلكتروني.</li>
+<li>بلد الإقامة أو الوجهة المطلوبة.</li>
+<li>نوع الخدمة المطلوبة.</li>
+<li>التفاصيل التي تذكرها في استفسارك.</li>
+<li>أي معلومات أخرى تقدمها طوعاً أثناء التواصل معنا.</li>
+</ul>
+
+</section>
+
+
+<section>
+<h2>3. كيفية استخدام معلوماتك</h2>
+
+<p>
+قد تستخدم أريزونا للهجرة المعلومات المقدمة للأغراض التالية:
+</p>
+
+<ul>
+<li>الرد على الاستفسارات والطلبات.</li>
+<li>التواصل مع العملاء الحاليين والمحتملين.</li>
+<li>فهم طبيعة الخدمات المطلوبة.</li>
+<li>تقديم المعلومات المتعلقة بالخدمات ذات الصلة.</li>
+<li>إدارة طلبات الخدمات والتواصل مع العملاء.</li>
+<li>الاحتفاظ بسجلات الأعمال والتواصل.</li>
+</ul>
+
+</section>
+
+
+<section>
+<h2>4. حماية المعلومات</h2>
+
+<p>
+تولي أريزونا للهجرة أهمية لخصوصية المعلومات الشخصية،
+وتسعى إلى حصر الوصول إليها بالأشخاص المخولين الذين
+تتطلب مهامهم الاطلاع عليها لأغراض العمل المشروعة.
+</p>
+
+<p>
+لا يمكن ضمان الأمان المطلق لأي وسيلة لنقل المعلومات
+أو تخزينها إلكترونياً؛ لذلك لا نستطيع ضمان الحماية المطلقة
+للمعلومات المرسلة عبر الإنترنت.
+</p>
+
+</section>
+
+
+<section>
+<h2>5. مشاركة المعلومات</h2>
+
+<p>
+قد يتمكن الموظفون المخولون المشاركون في الرد على الاستفسارات
+أو تقديم الخدمات المطلوبة من الاطلاع على المعلومات الشخصية.
+</p>
+
+<p>
+وقد تتم معالجة المعلومات من خلال مزودي خدمات خارجيين
+يدعمون استضافة الموقع أو وسائل التواصل أو العمليات التجارية
+الضرورية، عند الاقتضاء.
+</p>
+
+<p>
+كما قد يتم الإفصاح عن المعلومات عندما يقتضي القانون المعمول
+به ذلك أو بناءً على طلب قانوني صحيح.
+</p>
+
+</section>
+
+
+<section>
+<h2>6. الخدمات الخارجية</h2>
+
+<p>
+قد يحتوي موقعنا على روابط لخدمات خارجية، بما في ذلك
+واتساب ومزودي خدمات البريد الإلكتروني.
+</p>
+
+<p>
+عند استخدام هذه الخدمات، قد تخضع لسياسات الخصوصية
+والشروط الخاصة بتلك الجهات. ولا تتحكم أريزونا للهجرة
+بممارسات الخصوصية الخاصة بالمنصات الخارجية.
+</p>
+
+</section>
+
+
+<section>
+<h2>7. الاحتفاظ بالبيانات</h2>
+
+<p>
+قد نحتفظ بالمعلومات الشخصية للمدة اللازمة بصورة معقولة
+للرد على الاستفسارات أو تقديم الخدمات أو الاحتفاظ بسجلات
+الأعمال أو الوفاء بالالتزامات القانونية المعمول بها.
+</p>
+
+</section>
+
+
+<section>
+<h2>8. حقوقك المتعلقة بالخصوصية</h2>
+
+<p>
+وفقاً للقوانين المعمول بها، قد تتمتع بحقوق تتعلق بمعلوماتك
+الشخصية، ومنها طلب:
+</p>
+
+<ul>
+<li>الاطلاع على المعلومات الشخصية التي نحتفظ بها عنك.</li>
+<li>تصحيح المعلومات غير الدقيقة.</li>
+<li>حذف المعلومات عندما يسمح القانون بذلك.</li>
+<li>معرفة كيفية استخدام بياناتك.</li>
+</ul>
+
+<p>
+لتقديم طلب يتعلق بالخصوصية، يرجى التواصل معنا عبر
+عنوان البريد الإلكتروني الموضح أدناه.
+</p>
+
+</section>
+
+
+<section>
+<h2>9. خصوصية الأطفال</h2>
+
+<p>
+هذا الموقع غير موجه بشكل خاص للأطفال. ولا نسعى عن علم
+إلى جمع معلومات شخصية مباشرة من الأطفال من خلال هذا
+الموقع دون الحصول على الموافقات المناسبة عندما يقتضي
+القانون ذلك.
+</p>
+
+</section>
+
+
+<section>
+<h2>10. التعديلات على سياسة الخصوصية</h2>
+
+<p>
+قد تقوم أريزونا للهجرة بتحديث سياسة الخصوصية عند الحاجة.
+وسيتم نشر أي نسخة محدثة على هذه الصفحة مع تعديل تاريخ
+آخر تحديث.
+</p>
+
+</section>
+
+
+<section>
+<h2>11. التواصل معنا</h2>
+
+<p>
+للاستفسارات أو الطلبات المتعلقة بسياسة الخصوصية،
+يمكنكم التواصل مع أريزونا للهجرة عبر:
+</p>
+
+<p>
+البريد الإلكتروني:
+<a class="contact-link"
+href="mailto:info@arizonaservicesorg.com">
+info@arizonaservicesorg.com
+</a>
+</p>
+
+<p>
+الموقع الإلكتروني:
+<a class="contact-link" href="index.html">
+Arizona Immigration
+</a>
+</p>
+
+</section>
+
+</div>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<strong>ARIZONA IMMIGRATION</strong>
+
+<p>
+© <span id="year"></span>
+All Rights Reserved.
+</p>
+
+<a href="index.html"
+style="color:white;text-decoration:none;"
+data-en="Return to Home"
+data-ar="العودة إلى الصفحة الرئيسية">
+Return to Home
+</a>
+
+</footer>
+
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+let currentLanguage = "en";
+
+function switchLanguage() {
+
+const english = document.getElementById("englishPolicy");
+const arabic = document.getElementById("arabicPolicy");
+
+const button = document.querySelector(
+".header-actions button"
+);
+
+const elements = document.querySelectorAll("[data-en]");
+
+if (currentLanguage === "en") {
+
+currentLanguage = "ar";
+
+english.hidden = true;
+arabic.hidden = false;
+
+document.documentElement.lang = "ar";
+document.documentElement.dir = "rtl";
+document.body.dir = "rtl";
+
+button.textContent = "English";
+
+elements.forEach(element => {
+element.textContent = element.dataset.ar;
+});
+
+} else {
+
+currentLanguage = "en";
+
+english.hidden = false;
+arabic.hidden = true;
+
+document.documentElement.lang = "en";
+document.documentElement.dir = "ltr";
+document.body.dir = "ltr";
+
+button.textContent = "العربية";
+
+elements.forEach(element => {
+element.textContent = element.dataset.en;
+});
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
