@@ -780,6 +780,8 @@ University Street, opposite the University Mosque traffic light, Arab Bank Compl
 <a href="https://wa.me/18645803408" target="_blank" rel="noopener">
 <span class="whatsapp-icon">☏</span>
 +1 (864) 580-3408
+  <span class="whatsapp-icon">☏</span>
++1 ⁦(929) 598-0299⁩
 </a>
 </div>
 
@@ -1038,20 +1040,50 @@ const inquirySummary = document.getElementById("summary");
 const inquiryForm = document.getElementById("form");
 
 let selectedDestination = "";
+let selectedCountry = "";
 let selectedService = "";
-
+  
 const generalServices = [
   { en: "Tourism", ar: "السياحة" },
   { en: "Visit", ar: "الزيارة" },
-  { en: "Study", ar: "الدراسة" },
   { en: "Other Inquiry", ar: "استفسار آخر" }
 ];
-
-const destinationServices = {
-  "United States": [
-    ...generalServices.slice(0, 3),
-    { en: "Family Reunification", ar: "لمّ الشمل العائلي" }
-  ],
+const schengenCountries = [
+  { en: "Austria", ar: "النمسا" },
+  { en: "Belgium", ar: "بلجيكا" },
+  { en: "Bulgaria", ar: "بلغاريا" },
+  { en: "Croatia", ar: "كرواتيا" },
+  { en: "Czechia", ar: "التشيك" },
+  { en: "Denmark", ar: "الدنمارك" },
+  { en: "Estonia", ar: "إستونيا" },
+  { en: "Finland", ar: "فنلندا" },
+  { en: "France", ar: "فرنسا" },
+  { en: "Germany", ar: "ألمانيا" },
+  { en: "Greece", ar: "اليونان" },
+  { en: "Hungary", ar: "المجر" },
+  { en: "Iceland", ar: "آيسلندا" },
+  { en: "Italy", ar: "إيطاليا" },
+  { en: "Latvia", ar: "لاتفيا" },
+  { en: "Liechtenstein", ar: "ليختنشتاين" },
+  { en: "Lithuania", ar: "ليتوانيا" },
+  { en: "Luxembourg", ar: "لوكسمبورغ" },
+  { en: "Malta", ar: "مالطا" },
+  { en: "Netherlands", ar: "هولندا" },
+  { en: "Norway", ar: "النرويج" },
+  { en: "Poland", ar: "بولندا" },
+  { en: "Portugal", ar: "البرتغال" },
+  { en: "Romania", ar: "رومانيا" },
+  { en: "Slovakia", ar: "سلوفاكيا" },
+  { en: "Slovenia", ar: "سلوفينيا" },
+  { en: "Spain", ar: "إسبانيا" },
+  { en: "Sweden", ar: "السويد" },
+  { en: "Switzerland", ar: "سويسرا" }
+];
+"United States": [
+  ...generalServices.slice(0, 3),
+  { en: "Family Reunification", ar: "لمّ الشمل العائلي" },
+  { en: "Diversity Visa Lottery (DV Lottery)", ar: "برنامج الهجرة العشوائية (اللوتري)" }
+],
   "Canada": generalServices,
   "United Kingdom": generalServices,
   "Australia": generalServices,
@@ -1060,74 +1092,9 @@ const destinationServices = {
   "Mexico": generalServices
 };
 
-destinationButtons.addEventListener("click", function(event){
-
-  const button = event.target.closest(".dest-btn");
-  if(!button) return;
-
-  selectedDestination = button.dataset.dest;
-  selectedService = "";
-
-  const isArabic = document.documentElement.lang === "ar";
-
-  destinationButtons.querySelectorAll(".dest-btn").forEach(btn => {
-    btn.classList.remove("active");
-  });
-
-  button.classList.add("active");
-
-  destinationTitle.textContent = selectedDestination;
-
-  destinationHint.textContent = isArabic
-    ? "اختر نوع الخدمة التي ترغب بالاستفسار عنها."
-    : "Select the service you would like to inquire about.";
-
-  serviceChoices.replaceChildren();
-
-  destinationServices[selectedDestination].forEach(service => {
-
-    const choice = document.createElement("button");
-    choice.type = "button";
-    choice.className = "choice";
-
-    choice.textContent = isArabic ? service.ar : service.en;
-
-    choice.addEventListener("click", function(){
-
-      selectedService = isArabic ? service.ar : service.en;
-
-      serviceChoices.querySelectorAll(".choice").forEach(item => {
-        item.classList.remove("selected");
-      });
-
-      choice.classList.add("selected");
-
-      inquirySummary.textContent = isArabic
-        ? "الوجهة: " + selectedDestination + " | الخدمة: " + selectedService
-        : "Destination: " + selectedDestination + " | Service: " + selectedService;
-
-      inquirySection.hidden = false;
-
-      inquirySection.scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-      });
-
-    });
-
-    serviceChoices.appendChild(choice);
-
-  });
-
-  destinationPanel.classList.add("show");
-
-  destinationPanel.scrollIntoView({
-    behavior:"smooth",
-    block:"center"
-  });
-
-});
-
+"Destination: " + selectedDestination + "\n" +
+(selectedCountry ? "Country: " + selectedCountry + "\n" : "") +
+"Service: " + selectedService + "\n" +
 
 inquiryForm.addEventListener("submit", function(event){
 
@@ -1139,8 +1106,9 @@ inquiryForm.addEventListener("submit", function(event){
 
   const message =
     "New Inquiry - Arizona Immigration\n\n" +
-    "Destination: " + selectedDestination + "\n" +
-    "Service: " + selectedService + "\n" +
+   "Destination: " + selectedDestination + "\n" +
+(selectedCountry ? "Country: " + selectedCountry + "\n" : "") +
+"Service: " + selectedService + "\n" +
     "Name: " + customerName + "\n" +
     "Phone: " + customerPhone + "\n" +
     "Details: " + customerDetails;
